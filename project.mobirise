@@ -1,0 +1,409 @@
+{
+  "settings": {
+    "currentPage": "index.html",
+    "theme": {
+      "name": "conferencem4",
+      "title": "ConferenceM4",
+      "styling": {
+        "primaryColor": "#4200ff",
+        "secondaryColor": "#17161a",
+        "successColor": "#3dc84b",
+        "infoColor": "#4200ff",
+        "warningColor": "#283742",
+        "dangerColor": "#ebeaed",
+        "mainFont": "Be Vietnam",
+        "display1Font": "Be Vietnam",
+        "display1Size": 4.0625,
+        "display2Font": "Be Vietnam",
+        "display2Size": 3.1875,
+        "display5Font": "Be Vietnam",
+        "display5Size": 2.4375,
+        "display7Font": "Be Vietnam",
+        "display7Size": 1.5625,
+        "display4Font": "Be Vietnam",
+        "display4Size": 1,
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "titlePreset": "Life Coach",
+      "nameSelectPreset": "life_coach",
+      "presetSourceTheme": "conferencem4",
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "name": "Ersin Dincelli",
+    "versionFirst": "5.9.18",
+    "siteFonts": [],
+    "imageResize": true,
+    "favicon": "@PROJECT_PATH@/assets/images/ersindincelli-128x128.png",
+    "usedWebp": true,
+    "mbrsiteDomain": "weqh6fhjai",
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 3,
+    "versionPublish": "5.9.18"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Ersin Dincelli",
+        "meta_descr": "Dr. Ersin Dincelli is an Associate Professor of Information Systems at the University of Colorado Denver, specializing in information security, privacy, and human-computer interaction (HCI). His research, funded by the NSF and NSA, focuses on decision-making in cybersecurity, privacy-invasive technologies, security education, and HCI design for immersive systems, and he has received multiple prestigious awards.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": "",
+        "meta_image": "@PROJECT_PATH@/assets/images/ersindincelli-800x800.jpg"
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".content__block": {
+              "padding": "30px 15px"
+            },
+            ".mbr-text": {
+              "margin-bottom": "30px"
+            },
+            ".mbr-section-subtitle": {
+              "opacity": ".8",
+              "margin-bottom": "20px"
+            },
+            ".divider": {
+              "background-color": "@borderColor",
+              "width": "100%",
+              "height": "1px",
+              "margin": "15px 0",
+              "opacity": ".6"
+            },
+            ".bottom__text": {
+              "margin": "10px 0"
+            },
+            ".mbr-section-btn when (@showBottomText)": {
+              "margin-top": "60px",
+              "@media (max-width: 991px)": {
+                "margin-top": "30px"
+              }
+            },
+            ".btn": {
+              "margin-top": "0",
+              "&:hover": {
+                "background-color": "@primaryColor !important",
+                "border-color": "@primaryColor !important"
+              }
+            },
+            ".image": {
+              "width": "100%",
+              "img": {
+                "width": "100%",
+                "object-fit": "cover"
+              }
+            },
+            "@media (max-width: 991px)": {
+              ".image": {
+                "margin-bottom": "10px"
+              },
+              ".mbr-text": {
+                "margin-bottom": "20px"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#283742"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            }
+          },
+          "_name": "content2",
+          "_customHTML": "<section class=\"content2\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Left/Right Content\" name=\"reverse\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Column Text\" name=\"showBottomText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"color\" title=\"Border Color\" name=\"borderColor\" value=\"#191f23\" condition=\"showBottomText\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@THEME_PATH@/components/_images/conference28_1920.jpg\">\n            <input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#149dcc\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-center align-items-center\" mbr-class=\"{'flex-row-reverse' : reverse}\">\n            <div class=\"col-lg-5 col-sm-7\">\n                <div class=\"image\">\n                    <img src=\"@PROJECT_PATH@/assets/images/ersindincelli-800x800.jpg\" alt title>\n                </div>\n            </div>\n            <div class=\"col-lg-1 d-none d-lg-block\"></div>\n            <div class=\"col-lg-6 content__block\">\n                 <h3 class=\"mbr-section-subtitle mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">WE OFFER</h3>\n                <h2 class=\"mbr-section-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">Ersin Dincelli</h2>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Dr. Ersin Dincelli is an Associate Professor of Information Systems at the University of Colorado Denver, specializing in information security, privacy, and human-computer interaction (HCI). His research, funded by the NSF and NSA, focuses on decision-making in cybersecurity, privacy-invasive technologies, security education, and HCI design for immersive systems, and he has received multiple prestigious awards.<br><br><br></p>\n                <div class=\"row\" mbr-if=\"showBottomText\">\n                    <div class=\"col-lg-6 col-sm-6\">\n                        <div class=\"divider\"></div>\n                            <p class=\"bottom__text mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".bottom__text\">1. Vero inventore dolorum exminus<br> 2. Placeat sunt laborum<br> 3. Distinctio voluptas expedita<br> 4. Nulla expedita consequatur</p>\n                    </div>\n                    <div class=\"col-lg-6 col-sm-6\">\n                        <div class=\"divider\"></div>\n                        <p class=\"bottom__text mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".bottom__text\">1. Quos adipisci in atque <br> 2. Necessitatibus accusantium <br> 3. Debitis odio corrupti tenetur<br> 4. Dignissimos consequatur</p>\n                    </div>\n                \n                </div>\n            <div class=\"mbr-section-btn\" mbr-buttons mbr-theme-style=\"display-4\" mbr-if=\"showButtons\"><a class=\"btn btn-black\" href=\"https://www.linkedin.com/in/ersin-dincelli-68600a5/\" data-app-placeholder=\"Type Text\" target=\"_blank\">LinkedIn</a> <a class=\"btn btn-black\" href=\"https://scholar.google.com/citations?user=umWD1uoAAAAJ&hl=en\" data-app-placeholder=\"Type Text\" target=\"_blank\">Google Scholar<br></a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rRN6EiXnPa",
+          "_anchor": "content2-5",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_sourceTheme": "conferencem4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".counts__block": {
+              "width": "100%"
+            },
+            ".count": {
+              "display": "inline-block",
+              "margin-bottom": "0"
+            },
+            ".mbr-iconfont": {
+              "margin-right": "10px",
+              "color": "@primaryColor"
+            },
+            ".item__text": {
+              "margin": "5px 0",
+              "text-align": "center",
+              "color": "#17161a"
+            },
+            ".mbr-text": {
+              "margin": "20px 0 10px",
+              "text-align": "center",
+              "color": "#6a696c"
+            },
+            "& when (@itemCount > 1)": {
+              ".wrap": {
+                "margin-bottom": "30px",
+                "&:last-child": {
+                  "margin-bottom": "0"
+                }
+              }
+            },
+            ".title__block": {
+              "text-align": "center",
+              "color": "#283742"
+            }
+          },
+          "_name": "counters3",
+          "_customHTML": "<section class=\"counters3 counters\" group=\"Counters\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"ViewportChecker\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <header>Show/Hide</header>\n        <input type=\"range\" inline title=\"Item Count\" name=\"itemCount\" min=\"1\" max=\"8\" step=\"1\" value=\"6\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@THEME_PATH@/components/_images/conference28_1920.jpg\">\n            <input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#149dcc\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class mbr-class=\"{'container-fluid' : fullWidth, 'container' : !fullWidth}\">\n        <div class=\"row\" mbr-list mbr-list-grow=\"itemCount\" mbr-if=\"itemCount > 0\">\n            <div class=\"wrap\" mbr-class=\"{'col-lg-3 col-md-6' : fullWidth, 'col-lg-4 col-md-6' : !fullWidth}\">\n                <div class=\"title__block\">\n                    <p class=\"item__text mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item__text\">Enhancing Cybersecurity Awareness</p>\n                </div>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Designing effective Security Education, Training, and Awareness (SETA) programs.</p>\n            </div>\n            \n        <div class=\"wrap\" mbr-class=\"{'col-lg-3 col-md-6' : fullWidth, 'col-lg-4 col-md-6' : !fullWidth}\">\n                <div class=\"title__block\">\n                    <p class=\"item__text mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item__text\">Understanding Human-Computer Interaction<br></p>\n                </div>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Exploring decision-making processes in immersive environments, including VR, video games, and the Metaverse.<br></p>\n            </div><div class=\"wrap\" mbr-class=\"{'col-lg-3 col-md-6' : fullWidth, 'col-lg-4 col-md-6' : !fullWidth}\">\n                <div class=\"title__block\">\n                    <p class=\"item__text mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item__text\">Protecting Privacy in the Digital Age</p>\n                </div>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Studying privacy-invasive technologies, such as social media and wearable devices.</p>\n            </div><div class=\"wrap\" mbr-class=\"{'col-lg-3 col-md-6' : fullWidth, 'col-lg-4 col-md-6' : !fullWidth}\">\n                <div class=\"title__block\">\n                    <p class=\"item__text mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item__text\">Advancing Information Security Research</p>\n                </div>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Publications in leading academic journals and conferences.<br></p>\n            </div><div class=\"wrap\" mbr-class=\"{'col-lg-3 col-md-6' : fullWidth, 'col-lg-4 col-md-6' : !fullWidth}\">\n                <div class=\"title__block\">\n                    <p class=\"item__text mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item__text\">Recognized for Excellence</p>\n                </div>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Recipient of multiple prestigious awards, including the AIS Outstanding Contribution to Education Award (2024).<br></p>\n            </div><div class=\"wrap\" mbr-class=\"{'col-lg-3 col-md-6' : fullWidth, 'col-lg-4 col-md-6' : !fullWidth}\">\n                <div class=\"title__block\">\n                    <p class=\"item__text mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item__text\">Funded by Major Institutions</p>\n                </div>\n                    <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Research supported by the National Science Foundation (NSF) and National Security Agency (NSA).<br></p>\n            </div></div>\n    </div>\n</section>",
+          "_cid": "rRNumdZLFn",
+          "_anchor": "counters3-h",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_sourceTheme": "conferencem4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-text": {
+              "line-height": "1.55",
+              "color": "#000000",
+              "margin-bottom": "0"
+            },
+            ".price": {
+              "margin-top": "5px"
+            },
+            ".symbol": {
+              "line-height": "1.1",
+              "top": "3px",
+              "vertical-align": "top",
+              "position": "relative"
+            },
+            ".mbr-section-btn": {
+              "margin-top": "10px"
+            },
+            ".btn-md": {
+              "padding": "0 20px 0 15px",
+              "height": "50px",
+              "margin": "0 !important",
+              "&:hover": {
+                "background-color": "@secondaryColor !important",
+                "border-color": "@secondaryColor !important"
+              },
+              ".mbr-iconfont": {
+                "margin": "5px 0 0 !important",
+                "animation-name": "none",
+                "order": "0"
+              }
+            },
+            ".mbr-iconfont:after": {
+              "content": "''",
+              "display": "inline-block",
+              "vertical-align": "middle",
+              "height": "23px",
+              "width": "1px",
+              "background-color": "rgba(255, 255, 255, 0.4)",
+              "margin": "0 10px 0 10px"
+            },
+            "@media (max-width: 991px)": {
+              ".content__block, .price__block": {
+                "margin-bottom": "30px"
+              }
+            },
+            ".descr": {
+              "color": "#444345",
+              "margin-bottom": "0"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            }
+          },
+          "_name": "content1",
+          "_sourceTheme": "conferencem4",
+          "_customHTML": "<section class=\"content1 conferencem4_content1\" group=\"Content\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\">\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Price\" name=\"showPrice\">\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/conference28_1920.jpg\">\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t</fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"../_images/conference1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#149dcc\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n\t\t\n\t</mbr-parameters>\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-sm-12 content__block\" mbr-class=\"{'mb-3' : !showPrice, 'col-lg-6' : showPrice}\">\n\t\t\t\t<h2 class=\"mbr-section-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">For those who want to grow their product</h2>\n\t\t\t\t<p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Ersin Dincelli is an Associate Professor of Information Systems in the Business School at the University of Colorado Denver. He received his Ph.D. in Informatics with a primary major in Information Assurance from the University at Albany, State University of New York. Dr. Dincelli’s research concerns the behavioral aspects of information security and human-computer interaction (HCI). <br><br>Specifically, he studies individuals’ decision-making processes and behaviors in the context of information security and privacy, privacy-invasive technologies such as social media and wearable devices, designing security education, training, and awareness (SETA) programs, and HCI design for immersive systems, including virtual reality, video games, and the Metaverse.Dr. Dincelli has published in academic journals, such as the Journal of the Association for Information Systems, European Journal of Information Systems, Journal of Strategic Information Systems, Communications of the Association for Information Systems, Government Information Quarterly, Behaviour &amp; Information Technology, Information Systems Frontiers, IEEE IT Professional, and in the proceedings of leading information systems and security conferences. His work has been funded by the National Science Foundation (NSF) and the National Security Agency (NSA). <br><br>Dr. Dincelli has received several prestigious awards, most notably the AIS Outstanding Contribution to Education Award in 2024, the Laube Community Impact Award in 2020, the Distinguished Dissertation Award from the University at Albany in 2018, and recognition as a TIAA Chancellor’s Urban Engaged Scholar in 2022.</p>\n\t\t\t</div>\n\t\t\t<div class=\"col-lg-3 col-sm-6 price__block\" mbr-if=\"showPrice\">\n\t\t\t\t<div class=\"price__block\">\n\t\t\t\t\t<span mbr-text class=\"price mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-1\" data-app-selector=\".price\">59</span>\n\t\t\t\t\t<span mbr-text class=\"symbol mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".symbol\">$</span>\n\t\t\t\t</div>\n\t\t\t\t<p class=\"descr mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".descr, .price__block\">\n\t\t\t\t\t*6 Months Support<br>Included</p>\n\t\t\t</div>\n\t\t\t<div mbr-class=\"{'col-lg-3 col-sm-6' : showPrice, 'col-sm-12' : !showPrice}\">\n\t\t\t\t<div class=\"mbr-section-btn\" mbr-buttons mbr-theme-style=\"display-4\" mbr-if=\"showButtons\"><a class=\"btn btn-md btn-primary\" href=\"#\" data-app-placeholder=\"Type Text\"><span class=\"mobi-mbri mobi-mbri-gift mbr-iconfont mbr-iconfont-btn\"></span>BUY FOR $59</a></div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "uEqlWWMD4A",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content1-2"
+        },
+        {
+          "_name": "footer01",
+          "_sourceTheme": "flavorm5",
+          "_customHTML": "<section class=\"footer01 flavorm5\" group=\"Footer\" global once=\"footers\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"12\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Reverse\" name=\"reverseContent\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Logo\" name=\"showLogo\">\n        <input type=\"checkbox\" title=\"Social\" name=\"showSocial\">\n        <input type=\"range\" inline title=\"Social Amount\" name=\"soc\" min=\"1\" max=\"3\" step=\"1\" value=\"3\" condition=\"showSocial\">\n        <input type=\"color\" title=\"Social Color\" value=\"#ffffff\" name=\"socColor\" condition=\"showSocial\" selected>\n        <input type=\"color\" title=\"Social BG\" value=\"#212529\" name=\"socBg\" condition=\"showSocial\" selected>\n        <input type=\"color\" title=\"Active Color\" value=\"#ff543d\" name=\"active\" condition=\"showSoc\" selected>\n        <input type=\"checkbox\" title=\"Copyright\" name=\"showCopy\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/flavorm5/components/_images/background1.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n        <header condition=\"bg.type === 'video'\">Fallback Image</header>\n        <input type=\"image\" title=\"Fallback Image\" value=\"@ADDONS_PATH@/flavorm5/components/_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row content-wrap\" mbr-class=\"{'flex-row-reverse' : reverseContent}\">\n            <div class=\"col-12 col-lg-6\" mbr-if=\"showLogo || showTitle\">\n                <div class=\"title-wrapper\">\n                    <div class=\"logo-wrapper\" mbr-if=\"showLogo\">\n                        <a href=\"#\"><img src=\"@ADDONS_PATH@/flavorm5/components/_images/logo.png\" alt=\"Mobirise\"></a>\n                    </div>\n                    <h2 class=\"mbr-section-title mbr-fonts-style\" data-app-selector=\".mbr-section-title, .logo-wrapper\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\">\n                        <b>Ersin Dincelli</b></h2>\n                </div>\n            </div>\n            <div class=\"col-12 col-lg-6\" mbr-if=\"showSocial || showCopy\">\n                <div class=\"social-wrapper\" mbr-if=\"showSocial\">\n                    <div class=\"social-wrap\">\n                        <div class=\"soc-item\">\n                            <a href=\"https://mobiri.se/\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-facebook\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"soc > 1\">\n                            <a href=\"https://mobiri.se/\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-telegram\"></span>\n                            </a>\n                        </div>\n                        <div class=\"soc-item\" mbr-if=\"soc > 2\">\n                            <a href=\"https://mobiri.se/\">\n                                <span mbr-icon class=\"mbr-iconfont socicon socicon-instagram\"></span>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"copy-wrapper\">\n                    <p class=\"mbr-copy mbr-fonts-style\" data-app-selector=\".mbr-copy, .copy-wrapper, .social-wrapper\" mbr-theme-style=\"display-4\" mbr-if=\"showCopy\">\n                        © Copyright 2030 Ersin Dincelli</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".content-wrap": {
+              "justify-content": "center"
+            },
+            ".title-wrapper": {
+              ".logo-wrapper": {
+                "margin-bottom": "16px",
+                "img": {
+                  "display": "inline-flex",
+                  "width": "60px",
+                  "height": "60px",
+                  "object-fit": "contain",
+                  "border-radius": "100%"
+                },
+                "a": {
+                  "display": "inline-flex"
+                }
+              },
+              ".mbr-section-title": {
+                "margin-bottom": "0",
+                "@media (max-width: 992px)": {
+                  "margin-bottom": "46px"
+                }
+              }
+            },
+            ".social-wrapper": {
+              "margin-bottom": "16px",
+              "@media (max-width: 992px)": {
+                "margin-bottom": "46px",
+                "text-align": "left"
+              },
+              ".social-wrap": {
+                "display": "inline-flex",
+                "flex-wrap": "wrap",
+                ".soc-item": {
+                  "a": {
+                    "display": "block",
+                    "&:hover, &:hover": {
+                      ".mbr-iconfont": {
+                        "background-color": "@active"
+                      }
+                    },
+                    ".mbr-iconfont": {
+                      "display": "flex",
+                      "align-items": "center",
+                      "justify-content": "center",
+                      "width": "60px",
+                      "height": "60px",
+                      "min-width": "60px",
+                      "color": "@socColor",
+                      "background-color": "@socBg",
+                      "font-size": "32px",
+                      "border-radius": "100%",
+                      "transition": "all 0.3s ease-in-out",
+                      "margin": "0 10px 10px"
+                    }
+                  }
+                }
+              },
+              "text-align": "right"
+            },
+            ".copy-wrapper": {
+              ".mbr-copy": {
+                "display": "inline-block",
+                "width": "50%",
+                "margin-bottom": "0",
+                "@media (max-width: 992px)": {
+                  "width": "100%",
+                  "text-align": "left"
+                }
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ff8576"
+            },
+            ".mbr-copy": {
+              "color": "#51565c"
+            },
+            ".mbr-copy, .copy-wrapper": {
+              "text-align": "right"
+            },
+            ".mbr-section-title, .logo-wrapper": {
+              "color": "#191f23"
+            }
+          },
+          "_cid": "uEqjU8nh7M",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {},
+          "_anchor": "footer01-0"
+        }
+      ]
+    }
+  }
+}
