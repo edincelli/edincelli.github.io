@@ -18,9 +18,7 @@
       </div>
       <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-logo-title-footer"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">AI-ON</div>
+        <div id="unity-fullscreen-button">Play in fullscreen for the best experience. <b>Click here</b> to activate fullscreen mode.</div>
       </div>
     </div>
     <script>
@@ -61,7 +59,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Ersin Dincelli",
         productName: "AI-ON",
-        productVersion: "0.1.0:4",
+        productVersion: "0.0.1:1",
         showBanner: unityShowBanner,
       };
 
@@ -105,7 +103,6 @@
                 document.querySelector("#unity-fullscreen-button").onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
-
               }).catch((message) => {
                 alert(message);
               });
