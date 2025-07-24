@@ -39548,7 +39548,7 @@ s.wG(a,s.a.c.c.length-1)},
 wG(a,b){return this.acP(a,b)},
 acP(a,b){var s=0,r=A.R(t.H),q,p=2,o=[],n=this,m,l,k,j,i,h,g,f,e
 var $async$wG=A.N(function(c,d){if(c===1){o.push(d)
-s=p}while(true)switch(s){case 0:f=A.eI("https://aion-chats.azurewebsites.net/api/chat/message/"+n.a.c.a,0,null)
+s=p}while(true)switch(s){case 0:f=A.eI("https://aion-chats.azurewebsites.net/api/chat/message/"+n.a.c.a+"?code=test",0,null)
 p=4
 k={}
 j=t.N
@@ -39676,7 +39676,7 @@ var $async$tz=A.N(function(a,b){if(a===1)return A.O(b,r)
 while(true)switch(s){case 0:h=q.r
 h===$&&A.a()
 s=2
-return A.T(A.aOA(A.eI("https://aion-chats.azurewebsites.net/api/user/"+h+"/bots",0,null)),$async$tz)
+return A.T(A.aOA(A.eI("https://aion-chats.azurewebsites.net/api/user/"+h+"/bots?code=test",0,null)),$async$tz)
 case 2:p=b
 h=p.b
 s=h===200?3:5
@@ -39706,7 +39706,7 @@ var $async$vM=A.N(function(b,c){if(b===1)return A.O(c,r)
 while(true)switch(s){case 0:l=p.r
 l===$&&A.a()
 s=3
-return A.T(A.ats(A.eI("https://aion-chats.azurewebsites.net/api/chat/bot/"+a+"/"+l,0,null),null,null),$async$vM)
+return A.T(A.ats(A.eI("https://aion-chats.azurewebsites.net/api/chat/bot/"+a+"/"+l+"?code=test",0,null),null,null),$async$vM)
 case 3:o=c
 if(o.b===200)try{l=o
 n=B.bt.e2(A.atd(A.asP(l.e)).e2(l.w))
@@ -39824,7 +39824,7 @@ A.CY.prototype={
 vB(){var s=0,r=A.R(t.H),q,p=this,o,n,m,l
 var $async$vB=A.N(function(a,b){if(a===1)return A.O(b,r)
 while(true)switch(s){case 0:p.ar(new A.ak5(p))
-o=A.eI("https://aion-chats.azurewebsites.net/api/Login",0,null)
+o=A.eI("https://aion-chats.azurewebsites.net/api/Login?code=test",0,null)
 n=t.N
 m=A.ao(["Content-Type","application/json"],n,n)
 s=3
