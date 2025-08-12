@@ -1,11 +1,11 @@
 {
-    "name": "aion_chats",
-    "short_name": "aion_chats",
+    "name": "AI-ON Chat",
+    "short_name": "AI-ON Chat",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Dr. Dincelli's courses AI Chatbot.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
