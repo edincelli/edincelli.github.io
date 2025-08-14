@@ -45013,8 +45013,7 @@ $3(a,b,c){var s=null,r=A.q6(s,s,s,s,s,s,s,s,s,s,s,B.ec,B.bi,s,s,s,s,s,s,s)
 return new A.aK(B.bK,A.nr(!1,A.EV(A.jx(a,s,s,s),c,s),s,s,s,s,s,s,b,s,r),s)},
 $S:490}
 A.kM.prototype={
-G(a){var s=A.R(a).ax.a===B.ae?"placeholder_dark.png":"placeholder_light.png"
-return A.aIS(s,null,B.cB,this.d,this.c)}}
+G(a){return A.aIS("assets/"+(A.R(a).ax.a===B.ae?"placeholder_dark.png":"placeholder_light.png"),null,B.cB,this.d,this.c)}}
 A.vO.prototype={}
 A.ahw.prototype={
 $1(a){return J.az(a)},
