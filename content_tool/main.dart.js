@@ -44154,7 +44154,7 @@ if(l.e&&j)return new A.m0(!0,A.kz(k,k,k,B.HQ,k,k,l.gUh(),k,k,k,k,k),k)
 s=t.N
 r=t.K
 q=t.iV
-p=A.a2(new A.a_(A.b([A.a4(["icon",B.Hy,"label","New Chat","onPressed",new A.aqs(l,a)],s,r),A.a4(["icon",B.o8,"label","Edit Bot","onPressed",new A.aqt(l,a)],s,r),A.a4(["icon",B.o6,"label","Knowledge","onPressed",l.gUh()],s,r)],t.Mq),new A.aqu(j),q),q.i("an.E"))
+p=A.a2(new A.a_(A.b([A.a4(["icon",B.Hy,"label","New Chat","onPressed",new A.aqs(l,a)],s,r),A.a4(["icon",B.o6,"label","Knowledge","onPressed",l.gUh()],s,r),A.a4(["icon",B.o8,"label","Edit Bot","onPressed",new A.aqt(l,a)],s,r)],t.Mq),new A.aqu(j),q),q.i("an.E"))
 s=l.a.c
 r=t.p
 o=A.e2(A.b([A.uf(A.lQ(s.d,new A.aqv(),B.cB,32,32)),B.ed,A.bN(s.b,k,k,k,k,k,k)],r),B.a_,B.K,B.a0,k)
@@ -45492,7 +45492,7 @@ return A.K($async$qk,r)},
 ahy(a){A.bU(a,!1).auG(new A.awd())},
 aiF(a){if(A.bu(a,null,t.w).w.a.a<800)A.bU(a,!1).f4(A.hf(new A.awe(),null,t.z))
 else this.X(new A.awf(this))},
-G(a){var s,r,q,p=this,o=null,n=A.bu(a,o,t.w).w.a.a<800,m=t.N,l=t.z,k=A.b([A.a4(["icon",B.o5,"label","Edit Project","onPressed",new A.awi(p,a)],m,l),A.a4(["icon",B.o6,"label","Knowledge","onPressed",new A.awj(p,a)],m,l),A.a4(["icon",B.HF,"label","Projects","onPressed",new A.awk(p,a)],m,l)],t.H7)
+G(a){var s,r,q,p=this,o=null,n=A.bu(a,o,t.w).w.a.a<800,m=t.N,l=t.z,k=A.b([A.a4(["icon",B.HF,"label","Projects","onPressed",new A.awi(p,a)],m,l),A.a4(["icon",B.o6,"label","Knowledge","onPressed",new A.awj(p,a)],m,l),A.a4(["icon",B.o5,"label","Edit Project","onPressed",new A.awk(p,a)],m,l)],t.H7)
 if(n)s=A.b([new A.dN(new A.awl(),o)],t.Qa)
 else{m=t.cG
 s=A.a2(new A.a_(k,new A.awm(),m),m.i("an.E"))}m=p.d
@@ -45532,14 +45532,14 @@ $0(){var s=this.a
 s.f=!s.f},
 $S:0}
 A.awi.prototype={
-$0(){return this.a.qk(this.b)},
-$S:9}
+$0(){return this.a.ahy(this.b)},
+$S:0}
 A.awj.prototype={
 $0(){return this.a.aiF(this.b)},
 $S:0}
 A.awk.prototype={
-$0(){return this.a.ahy(this.b)},
-$S:0}
+$0(){return this.a.qk(this.b)},
+$S:9}
 A.awl.prototype={
 $1(a){var s=null
 return new A.aK(B.nx,A.nr(!1,B.oa,s,s,s,s,s,s,new A.awh(a),s,A.q6(s,s,s,s,s,s,s,s,s,s,s,B.ec,B.bi,s,s,s,s,s,s,s)),s)},
