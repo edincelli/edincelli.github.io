@@ -8231,7 +8231,7 @@ _.U$=b
 _.aN$=_.aM$=0},
 aGf(){var s=0,r=A.L(t.YX),q,p
 var $async$aGf=A.H(function(a,b){if(a===1)return A.I(b,r)
-while(true)switch(s){case 0:p=window.localStorage.getItem("themeMode")
+while(true)switch(s){case 0:p=window.localStorage.getItem("content_tool_themeMode")
 if(p!=null){q=B.b.rv(B.Km,new A.aCi(p),new A.aCj())
 s=1
 break}q=null
@@ -8242,7 +8242,7 @@ return A.K($async$aGf,r)},
 aGm(a){return A.b2t(a)},
 b2t(a){var s=0,r=A.L(t.H)
 var $async$aGm=A.H(function(b,c){if(b===1)return A.I(c,r)
-while(true)switch(s){case 0:window.localStorage.setItem("themeMode",a.b)
+while(true)switch(s){case 0:window.localStorage.setItem("content_tool_themeMode",a.b)
 return A.J(null,r)}})
 return A.K($async$aGm,r)},
 aCi:function aCi(a){this.a=a},
@@ -28548,8 +28548,8 @@ p=o}else p=o
 J.jd(p,q)}return n},
 aGe(){var s=0,r=A.L(t.nB),q,p,o
 var $async$aGe=A.H(function(a,b){if(a===1)return A.I(b,r)
-while(true)switch(s){case 0:p=window.localStorage.getItem("username")
-o=window.localStorage.getItem("userId")
+while(true)switch(s){case 0:p=window.localStorage.getItem("content_tool_username")
+o=window.localStorage.getItem("content_tool_userId")
 if(p!=null&&o!=null){q=new A.Eb(p,o)
 s=1
 break}q=null
@@ -28560,18 +28560,18 @@ return A.K($async$aGe,r)},
 aGl(a){return A.b2s(a)},
 b2s(a){var s=0,r=A.L(t.H)
 var $async$aGl=A.H(function(b,c){if(b===1)return A.I(c,r)
-while(true)switch(s){case 0:window.localStorage.setItem("username",a.a)
-window.localStorage.setItem("userId",a.b)
+while(true)switch(s){case 0:window.localStorage.setItem("content_tool_username",a.a)
+window.localStorage.setItem("content_tool_userId",a.b)
 return A.J(null,r)}})
 return A.K($async$aGl,r)},
 aBH(){var s=0,r=A.L(t.H),q
 var $async$aBH=A.H(function(a,b){if(a===1)return A.I(b,r)
 while(true)switch(s){case 0:q=window.localStorage
 q.toString
-B.Aa.F(q,"username")
+B.Aa.F(q,"content_tool_username")
 q=window.localStorage
 q.toString
-B.Aa.F(q,"userId")
+B.Aa.F(q,"content_tool_userId")
 return A.J(null,r)}})
 return A.K($async$aBH,r)},
 aG2(a,b){return A.b1t(a,b)},
