@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | CQ - Connections Minigame</title>
+    <title>Unity Web Player | CQ - Minigame Connection</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -16,10 +16,12 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <!-- <div id="unity-warning"> </div>
+      <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-fullscreen-button">Play in fullscreen for the best experience. <b>Click here</b> to activate fullscreen mode.</div>
-      </div> -->
+        <div id="unity-logo-title-footer"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">CQ - Minigame Connection</div>
+      </div>
     </div>
     <script>
       var canvas = document.querySelector("#unity-canvas");
@@ -53,13 +55,13 @@
       var loaderUrl = buildUrl + "/minigame_conn.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/minigame_conn.data.gz",
-        frameworkUrl: buildUrl + "/minigame_conn.framework.js.gz",
-        codeUrl: buildUrl + "/minigame_conn.wasm.gz",
+        dataUrl: buildUrl + "/minigame_conn.data",
+        frameworkUrl: buildUrl + "/minigame_conn.framework.js",
+        codeUrl: buildUrl + "/minigame_conn.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Ersin Dincelli",
-        productName: "CQ - Connections Minigame",
-        productVersion: "0.0.1:1",
+        productName: "CQ - Minigame Connection",
+        productVersion: "0.0.1:5",
         showBanner: unityShowBanner,
       };
 
@@ -69,22 +71,14 @@
       // happening inside the engine, and you would instead like to size up
       // the canvas DOM size and WebGL render target sizes yourself.
       // config.matchWebGLToCanvasSize = false;
-      
+
+
       var meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        document.querySelector("#unity-container").className = "unity-mobile";
-        canvas.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-      }
-
+      document.getElementsByTagName('head')[0].appendChild(meta);
+      document.querySelector("#unity-container").className = "unity-mobile";
+      canvas.className = "unity-mobile";
       document.querySelector("#unity-loading-bar").style.display = "block";
 
       var script = document.createElement("script");
@@ -94,10 +88,10 @@
           document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
               }).then((unityInstance) => {
                 document.querySelector("#unity-loading-bar").style.display = "none";
-                const fsBtn = document.querySelector("#unity-fullscreen-button");
-                if (fsBtn) {
-                  fsBtn.onclick = () => unityInstance.SetFullscreen(1);
-                }
+                document.querySelector("#unity-fullscreen-button").onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+
               }).catch((message) => {
                 alert(message);
               });
